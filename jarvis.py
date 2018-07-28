@@ -4,6 +4,7 @@ import os
 import webbrowser
 import smtplib
 
+
 def talkToMe(audio):
     print(audio)
     tts = gTTs(text=audio, languae='en')
@@ -11,23 +12,24 @@ def talkToMe(audio):
     os.system('mpg123 audio.mp3')
 
 # Listen for commands
+
+
 def myCommand(parameter_list):
-    
+
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
-        print('I am ready for your next command master')  
-        r.pause_threshold =1
-        r.adjust_for_ambient_noise(source, duration = 1)
+        print('I am ready for your next command master')
+        r.pause_threshold = 1
+        r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
 
         try:
             command = r.recognize_google(audio)
             print('You said: ' + command + '/n')
-        
-        # Loop back to continue listening for commands
 
+        # Loop back to continue listening for commands\
         except sr.UnknownValueError:
             assistant(myCommand())
 
-        return command    
+        return command
