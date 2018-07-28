@@ -28,7 +28,7 @@ def myCommand(parameter_list):
             command = r.recognize_google(audio)
             print('You said: ' + command + '/n')
 
-        # Loop back to continue listening for commands\
+        # Loop back to continue listening for commands
         except sr.UnknownValueError:
             assistant(myCommand())
 
