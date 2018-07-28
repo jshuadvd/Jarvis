@@ -11,9 +11,8 @@ def talkToMe(audio):
     tts.save('audio.mp3')
     os.system('mpg123 audio.mp3')
 
+
 # Listen for commands
-
-
 def myCommand(parameter_list):
 
     r = sr.Recognizer()
