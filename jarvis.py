@@ -34,3 +34,7 @@ def myCommand(parameter_list):
         return command
 
 # If Statement
+def assistant(command);
+
+    if 'open Reddit python' in command:
+        chrome_path = '/Applications/Google Chrome.app'
