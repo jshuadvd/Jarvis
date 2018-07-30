@@ -34,7 +34,7 @@ def myCommand(parameter_list):
         return command
 
 # If Statement
-def assistant(command);
+def assistant(command):
 
     if 'open Reddit python' in command:
         chrome_path = '/Applications/Google Chrome.app'
@@ -72,3 +72,8 @@ def assistant(command);
 
             # Email Sent Confirmation
             talkToMe('Your message was sent master')
+
+talkToMe('I am ready for your command')
+
+while True:
+    assistant(myCommand())
