@@ -7,9 +7,12 @@ import smtplib
 
 def talkToMe(audio):
     print(audio)
-    tts = gTTS(text=audio, lang='en')
-    tts.save('audio.mp3')
-    os.system('mpg123 audio.mp3')
+    # tts = gTTS(text=audio, lang='en')
+    # tts.save('audio.mp3')
+    # os.system('mpg123 audio.mp3')
+
+    for line in audio.splitlines():
+        os.system("say " + audio)
 
 
 # Listen for commands
@@ -53,7 +56,7 @@ def assistant(command):
             content = myCommand()
 
             # Init SMTP To send mail with Gmail 
-            mail - smtplib.SMTP('smtp.gmail.com', 587)
+            mail = smtplib.SMTP('smtp.gmail.com', 587)
 
             # Identify to server
             mail.ehlo()
