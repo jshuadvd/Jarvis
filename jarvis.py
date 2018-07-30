@@ -38,3 +38,13 @@ def assistant(command);
 
     if 'open Reddit python' in command:
         chrome_path = '/Applications/Google Chrome.app'
+        url = 'https://www.redit.com/r/python'
+        webbrowser.get(chrome_path).open(url)
+
+    if 'what\'s up' in command:
+        talkToMe('I am at your service master')
+
+    if 'email' in command:
+        talkToMe('Who is the recipient')
+        
+                
