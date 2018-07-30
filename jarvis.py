@@ -4,7 +4,6 @@ import os
 import webbrowser
 import smtplib
 
-
 def talkToMe(audio):
     print(audio)
     # tts = gTTS(text=audio, lang='en')
