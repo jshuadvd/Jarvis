@@ -1,4 +1,4 @@
-from gtts import gTTs
+from gtts import gTTS
 import speech_recognition as sr
 import os
 import webbrowser
@@ -7,7 +7,7 @@ import smtplib
 
 def talkToMe(audio):
     print(audio)
-    tts = gTTs(text=audio, languae='en')
+    tts = gTTS(text=audio, languae='en')
     tts.save('audio.mp3')
     os.system('mpg123 audio.mp3')
 
