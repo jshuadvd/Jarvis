@@ -46,5 +46,10 @@ def assistant(command);
 
     if 'email' in command:
         talkToMe('Who is the recipient')
-        
-                
+        recipient = myCommand()
+
+        if 'Rhiannon' in recipient:
+            talkToMe('What should I say')
+            content = myCommand()
+
+            # SMTP To send mail with Gmail 
