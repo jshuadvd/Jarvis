@@ -52,4 +52,23 @@ def assistant(command);
             talkToMe('What should I say')
             content = myCommand()
 
-            # SMTP To send mail with Gmail 
+            # Init SMTP To send mail with Gmail 
+            mail - smtplib.SMTP('smtp.gmail.com', 587)
+
+            # Identify to server
+            mail.ehlo()
+
+            # Encrypt Session
+            mail.starttls()
+
+            # Login
+            mail.login('username', 'password')
+
+            # Send Message
+            mail.sendmail('PERSON NAME', 'emailaddress@email.com', content)
+
+            # Close Connection
+            mail.close()
+
+            # Email Sent Confirmation
+            talkToMe('Your message was sent master')
